@@ -1,3 +1,4 @@
+import { MaterialModule } from './../../../material/src/lib/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
@@ -11,8 +12,19 @@ export const authRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, HttpClientModule],
-  declarations: [LoginComponent, LoginFormComponent],
-  exports: [LoginComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HttpClientModule,
+    MaterialModule
+  ],
+
+  declarations: [
+    LoginComponent,
+    LoginFormComponent
+  ],
+  exports: [
+    LoginComponent
+  ],
 })
 export class AuthModule {}
