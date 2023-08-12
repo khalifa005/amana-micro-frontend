@@ -3,17 +3,17 @@
   <mat-card-content>
     <form [formGroup]="form" fxLayout="column" fxLayoutAlign="center none">
 
-      <amana-micro-frontend-banner
+      <amana-micro-frontend-custom-input
       [lable]=" 'Username' "
       [placeHolder]=" 'Username' "
       [formcontrol]="form.get('Username')" >
-      </amana-micro-frontend-banner>
+      </amana-micro-frontend-custom-input>
 
-      <amana-micro-frontend-banner
+      <amana-micro-frontend-custom-input
       [lable]=" 'Password' "
       [placeHolder]=" 'Password' "
       [formcontrol]="form.get('Password')" >
-      </amana-micro-frontend-banner>
+      </amana-micro-frontend-custom-input>
 
     </form>
     <button mat-raised-button (click)="login()">login</button>
