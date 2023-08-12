@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@amana-micro-frontend/auth": ["libs/auth/src/index.ts"],
       "@amana-micro-frontend/common-ui": ["libs/common-ui/src/index.ts"],
       "@amana-micro-frontend/products": ["libs/products/src/index.ts"]
     }
