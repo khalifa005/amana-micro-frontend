@@ -34,7 +34,10 @@ export class LoginFormComponent implements OnInit , OnDestroy {
   }
 
   login() {
+    console.log(".form.valid");
     if (this.form.valid) {
+    console.log("true form.valid");
+
       this.handleForm(this.form);
     }
   }
@@ -42,11 +45,13 @@ export class LoginFormComponent implements OnInit , OnDestroy {
 
   handleForm(form: LoginForm): void {
     let finalModelDto =  this.mapFormToDto(form);
+    console.log("handleForm");
 
     this.submitForm.emit({
       Username: finalModelDto.Username,
       Password: finalModelDto.Password
     } as IAuthenticate);
+    console.log(finalModelDto);
 
 
   }

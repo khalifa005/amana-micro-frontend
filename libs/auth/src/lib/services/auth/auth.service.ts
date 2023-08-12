@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { User } from './../../../../../data-models/src/lib/User';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -14,8 +16,16 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) {}
 
-  login(authenticate: IAuthenticate): Observable<User> {
-    return this.httpClient.post<User>('http://localhost:3000/login', authenticate)
-    .pipe(tap((user: User) => this.userSubject$.next(user)));
+  login(authenticate: IAuthenticate): any {
+    // return this.httpClient.post<User>('http://localhost:3000/login', authenticate)
+    // .pipe(tap((user: User) => this.userSubject$.next(user)));
+    let userObj = new User ();
+    userObj.id = 1;
+    userObj.username = 'khalifa';
+    userObj.token = 'sdasdsadasfdsad';
+    userObj.role = 'Admin';
+    console.log("auth service ");
+
+     this.userSubject$.next(userObj);
   }
 }

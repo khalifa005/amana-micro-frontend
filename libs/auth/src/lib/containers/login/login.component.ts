@@ -1,3 +1,4 @@
+import { AuthService } from '@amana-micro-frontend/auth';
 import { Component, OnInit, ChangeDetectionStrategy  } from '@angular/core';
 
 @Component({
@@ -12,7 +13,7 @@ import { Component, OnInit, ChangeDetectionStrategy  } from '@angular/core';
 
 export class LoginComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor() {}
+  constructor(private authService:AuthService) {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
   ngOnInit() {
@@ -21,8 +22,8 @@ export class LoginComponent implements OnInit {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   login(authenticate:any) {
-    console.log(authenticate);
-    // this.authService.login(authenticate).subscribe();
+    console.log('authService.login(authenticate)');
+    this.authService.login(authenticate).subscribe();
   }
 
 }
