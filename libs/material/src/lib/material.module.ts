@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
@@ -11,9 +12,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomInputComponent } from './custom-input/custom-input.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     FlexLayoutModule,
     MatInputModule,
     MatCardModule,
@@ -25,7 +30,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatProgressSpinnerModule,
     MatMenuModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
   ],
   exports: [
     FlexLayoutModule,
@@ -39,7 +48,12 @@ import { MatSelectModule } from '@angular/material/select';
     MatProgressSpinnerModule,
     MatMenuModule,
     MatTableModule,
-    MatSelectModule
-  ]
+    MatSelectModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CustomInputComponent,
+  ],
+  declarations: [CustomInputComponent],
 })
 export class MaterialModule {}

@@ -7,6 +7,12 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    // "no-empty": false,
+    // "no-unused-vars": 0,
+    // "@typescript-eslint/no-unused-vars": 0,
+    // "resolveJsonModule": true,
+    "allowSyntheticDefaultImports":true,
+    // "target": "es2020",
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
@@ -21,6 +27,9 @@
       "@amana-micro-frontend/material": ["libs/material/src/index.ts"],
       "@amana-micro-frontend/products": ["libs/products/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": false,
   },
   "exclude": ["node_modules", "tmp"]
 }
