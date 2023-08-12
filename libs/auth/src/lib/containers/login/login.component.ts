@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   login(authenticate:any) {
     console.log(authenticate);
+    // this.authService.login(authenticate).subscribe();
   }
 
 }

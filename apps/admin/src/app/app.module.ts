@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 // import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { routes } from './app.routes';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';   
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonUiModule,
     AuthModule,
     // RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
