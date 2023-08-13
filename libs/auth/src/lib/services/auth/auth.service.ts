@@ -14,7 +14,12 @@ export class AuthService {
   private userSubject$ = new BehaviorSubject<any>(null);
   user$ = this.userSubject$.asObservable();
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+    const user = localStorage.getItem('user');
+    if (user) {
+      this.userSubject$.next(JSON.parse(user));
+    }
+  }
 
   login(authenticate: IAuthenticate): any {
     // return this.httpClient.post<User>('http://localhost:3000/login', authenticate)
@@ -27,5 +32,6 @@ export class AuthService {
     console.log("auth service ");
 
      this.userSubject$.next(userObj);
+     localStorage.setItem('user', JSON.stringify(userObj));
   }
 }
