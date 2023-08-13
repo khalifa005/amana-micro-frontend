@@ -24,11 +24,11 @@ export class AuthGuard implements CanActivate {
       map(user => {
         if (user) {
           // eslint-disable-next-line no-debugger
-          debugger;
+          // debugger;
           return true;
         } else {
           // eslint-disable-next-line no-debugger
-          debugger;
+          // debugger;
           this.router.navigate([`/auth/login`]);
           return false;
         }
