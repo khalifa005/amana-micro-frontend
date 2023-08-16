@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // this.router.navigateByUrl("/auth/login");
-    console.log("environment.production");
-    console.log(environment.apiBaseUrl);
+    // console.log("environment.production");
+    // console.log(environment.apiBaseUrl);
   }
 
   title = 'admin';

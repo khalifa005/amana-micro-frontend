@@ -2,6 +2,7 @@ import { AuthService } from '@amana-micro-frontend/auth';
 import { User } from '@amana-micro-frontend/data-models';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '@amana-micro-frontend/shared-environments';
 
 @Component({
   selector: 'amana-micro-frontend-layout',
@@ -16,6 +17,8 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
     this.user$ = this.authService.user$;
     console.log("layout");
+    console.log("environment.production");
+    console.log(environment.apiBaseUrl);
 
   }
 }
