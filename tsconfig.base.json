@@ -21,7 +21,8 @@
       "@amana-micro-frontend/data-models": ["libs/data-models/src/index.ts"],
       "@amana-micro-frontend/layout": ["libs/layout/src/index.ts"],
       "@amana-micro-frontend/material": ["libs/material/src/index.ts"],
-      "@amana-micro-frontend/products": ["libs/products/src/index.ts"]
+      "@amana-micro-frontend/products": ["libs/products/src/index.ts"],
+      "@amana-micro-frontend/shared/assets": ["libs/shared/assets/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
