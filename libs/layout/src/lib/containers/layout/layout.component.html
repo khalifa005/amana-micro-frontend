@@ -1,6 +1,6 @@
 <!-- eslint-disable @angular-eslint/template/no-negated-async -->
 <mat-toolbar color="primary" fxLayout="row">
-  <span>Admin Portal</span>
+  <span>Shared lib Portal</span>
   <div class="right-nav">
     <span *ngIf="user$ | async as user">
       <button mat-button>{{(user$ | async)?.username}}</button>
@@ -10,6 +10,12 @@
     <span *ngIf="!(user$ | async)">
       <span mat-button [routerLink]="['/auth/login']" routerLinkActive="router-link-active">Login</span>
     </span>
+
+    <img
+  alt="Nx logo"
+  width="75"
+  src="/assets/logo.png"/>
+
   </div>
 </mat-toolbar>
 <ng-content></ng-content>
