@@ -1,5 +1,5 @@
-import { MaterialModule } from './../../../material/src/lib/material.module';
-import { CommonUiModule } from './../../../common-ui/src/lib/common-ui.module';
+import { MaterialModule } from '@amana-micro-frontend/material';
+import { CommonUiModule } from '@amana-micro-frontend/common-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';

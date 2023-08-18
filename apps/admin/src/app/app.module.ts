@@ -1,6 +1,6 @@
-import { LayoutModule } from './../../../../libs/layout/src/lib/layout.module';
-import { AuthModule, authRoutes } from './../../../../libs/auth/src/lib/auth.module';
-import { CommonUiModule } from './../../../../libs/common-ui/src/lib/common-ui.module';
+import { LayoutModule } from '@amana-micro-frontend/layout';
+import { AuthModule, authRoutes } from '@amana-micro-frontend/auth';
+// import { CommonUiModule } from './../../../../libs/common-ui/src/lib/common-ui.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -15,7 +15,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CommonUiModule,
+    // CommonUiModule,
     AuthModule,
     LayoutModule,
     // RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),

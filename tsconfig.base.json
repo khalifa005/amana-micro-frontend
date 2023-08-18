@@ -14,6 +14,7 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictNullChecks": false,
     "baseUrl": ".",
     "paths": {
       "@amana-micro-frontend/auth": ["libs/auth/src/index.ts"],
@@ -21,6 +22,7 @@
       "@amana-micro-frontend/data-models": ["libs/data-models/src/index.ts"],
       "@amana-micro-frontend/layout": ["libs/layout/src/index.ts"],
       "@amana-micro-frontend/material": ["libs/material/src/index.ts"],
+      "@amana-micro-frontend/nebular": ["libs/nebular/src/index.ts"],
       "@amana-micro-frontend/products": ["libs/products/src/index.ts"],
       "@amana-micro-frontend/shared-environments": [
         "libs/shared-environments/src/index.ts"

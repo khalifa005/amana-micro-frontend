@@ -1,5 +1,5 @@
 <!-- eslint-disable @angular-eslint/template/no-negated-async -->
-<mat-toolbar color="primary" fxLayout="row">
+<!-- <mat-toolbar color="primary" fxLayout="row">
   <span>Shared lib Portal</span>
   <div class="right-nav">
     <span *ngIf="user$ | async as user">
@@ -17,5 +17,18 @@
   src="/assets/logo.png"/>
 
   </div>
-</mat-toolbar>
+</mat-toolbar> -->
+
+<amana-micro-frontend-header (menuToggled)="toggle()"></amana-micro-frontend-header>
+
+      <mat-drawer-container>
+        <mat-drawer mode="side" [opened]="opened">
+          <amana-micro-frontend-menu-item [menu]="menu"></amana-micro-frontend-menu-item>
+        </mat-drawer>
+
+        <mat-drawer-content [class.margin-left]="opened">
+          <router-outlet></router-outlet>
+        </mat-drawer-content>
+      </mat-drawer-container>
+
 <ng-content></ng-content>
